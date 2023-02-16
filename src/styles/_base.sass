@@ -1,14 +1,60 @@
 @import './_vars'
 body
 	font-family: var(--main-fontFamily)
+	overflow-x: hidden
+	padding: 0 calc(20px - (100vw - 100%)) 0 0
+	margin-right: -20px
+	&.overflow-hidden
+		scrollbar-gutter: stable
+		overflow: hidden
 
 h1,h2,h3,h4,h5,h6
-	font-family: var(--heading-fonFamily)
+	font-family: var(--heading-fontFamily)
 
-span.price, span.diameter
-	font-family: var(--price-fonFamily)
+h1
+	font-size: 45px
+	line-height: 60px
+
+h2
+	font-size: 32px
+	line-height: 43px
+
+h3
+	font-size: 30px
+	line-height: 40px
+
+h4
+	font-size: 14px
+	line-height: 24px
+
+main
+	position: relative
+	z-index: -2
+
+.price,.diameter
+	span
+		font-family: var(--price-fonFamily)
 
 .content
 	max-width: var(--main-content-width)
 	margin-left: auto
 	margin-right: auto
+	padding-left: var(--main-content-padding-x)
+	padding-right: var(--main-content-padding-x)
+
+@media screen and ( max-width: 1241px )
+	h1
+		font-size: 40px
+		line-height: 55px
+
+	h2
+		font-size: 27px
+		line-height: 38px
+
+	h3
+		font-size: 25px
+		line-height: 35px
+
+	h4
+		font-size: 14px
+		line-height: 24px

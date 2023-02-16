@@ -1,0 +1,68 @@
+@import '../../styles/_vars'
+.first-screen
+	height: 768px
+	.content
+		@include flex-items-center()
+		justify-content: space-around
+		.cta
+			position: relative
+			z-index: 1
+			.heading
+				.line
+					margin-left: -65px
+					@include flex-items-center()
+					gap: 15px
+					span
+						margin-top: 5px
+						@include line-brown(50px)
+				h3
+					margin-top: 15px
+			.text
+				margin-top: 39px
+				max-width: 260px
+				font-size: 14px
+				font-weight: 300
+				opacity: var(--main-opacity)
+			.catalog
+				margin-top: 64px
+				padding: 26px 38px
+				font-size: 12px
+				font-weight: 500
+				text-transform: uppercase
+				letter-spacing: 0.05em
+				color: var(--main-color-white)
+				background-color: var(--main-color-dark-brown)
+				@include main-transition(background-color, ())
+				&:hover
+					background-color: var(--main-color-dark-brown-hover)
+		.picture
+			position: relative
+			.semicircle
+				height: 100%
+				position: absolute
+				left: -120px
+				z-index: 0
+				& > img
+					height: 100%
+			&-holder
+				margin-top: -11px
+			&-container
+				position: relative
+				display: flex
+				z-index: 1
+				.price
+					margin-top: 140px
+					margin-right: -65px
+					height: max-content
+					@include flex-items-center()
+					gap: 15px
+					&__line
+						@include line-brown(50px)
+				.diameter
+					align-self: flex-end
+					margin-bottom: 135px
+					margin-left: -65px
+					@include flex-items-center()
+					gap: 15px
+					&__line
+						@include line-brown(50px)

@@ -15,7 +15,7 @@
 </head>
 
 	<body>
-		<header>
+		<header class="header">
 	<div class="content">
 		<div class="logo">
 			<a href="/">
@@ -24,13 +24,14 @@
 			</a>
 		</div>
 		<nav class="nav">
-			<ul class="list">
-				<li class="list__item"><a href="#">Каталог</a></li>
-				<li class="list__item"><a href="#">Акции</a></li>
-				<li class="list__item"><a href="#">Доставка</a></li>
-				<li class="list__item"><a href="#">Контакты</a></li>
-			</ul>
-		</nav>
+	<ul class="list">
+		<li class="list__item"><a href="#">Каталог</a></li>
+		<li class="list__item"><a href="#">Акции</a></li>
+		<li class="list__item"><a href="#">Доставка</a></li>
+		<li class="list__item"><a href="#">Контакты</a></li>
+	</ul>
+</nav>
+
 		<div class="tools">
 			<ul class="list">
 				<li class="list__search item">
@@ -74,9 +75,66 @@
 			</ul>
 		</div>
 	</div>
+	<div class="burger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!-- MOBILE MENU -->
+	<div class="mobile-menu-container">
+	<div class="mobile-menu"><nav class="nav">
+	<ul class="list">
+		<li class="list__item"><a href="#">Каталог</a></li>
+		<li class="list__item"><a href="#">Акции</a></li>
+		<li class="list__item"><a href="#">Доставка</a></li>
+		<li class="list__item"><a href="#">Контакты</a></li>
+	</ul>
+</nav>
+</div>
+	<div class="blur"></div>
+</div>
+
 </header>
 
-		<main></main>
+		<main><section class="first-screen">
+	<div class="content">
+		<div class="cta">
+			<div class="heading">
+				<div class="line">
+					<span></span>
+					<h1>Весна/Лето 2019</h1>
+				</div>
+				<h3>Коллекция</h3>
+			</div>
+			<div class="text">
+				Швейцарские часы в наличии в Москве и с доставкой по всему миру
+			</div>
+			<a class="catalog" href="#">Смотреть каталог</a>
+		</div>
+		<div class="picture">
+			<div class="semicircle">
+				<img
+					src="./assets/images/firstscreen-semicircle.svg"
+					alt="Semicircle"
+				/>
+			</div>
+			<div class="picture-container">
+				<div class="price">
+					<span>22 000 ₽</span>
+					<span class="price__line"></span>
+				</div>
+				<div class="picture-holder">
+					<picture><source srcset="./assets/images/watch_main.webp" type="image/webp"><img src="./assets/images/watch_main.png" alt="Часы Rado" /></picture>
+				</div>
+				<div class="diameter">
+					<span class="diameter__line"></span>
+					<span>28 мм диаметр</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</main>
 		
 
 		<script type="module" src="./scripts/main.js"></script>

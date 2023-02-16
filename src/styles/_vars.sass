@@ -3,9 +3,11 @@
 	--main-fontFamily: 'Roboto', sans-serif
 	--heading-fontFamily: 'Playfair Display', serif
 	--price-fonFamily: 'Prata', serif
+
 	// Colors
 	--main-color-black: #1B1A17
 	--main-color-dark-brown: #444240
+	--main-color-dark-brown-hover: #6f6964
 	--main-color-white: #fff
 
 	--header-color: #555248
@@ -13,12 +15,20 @@
 
 	--favorite-icon-hover: #FF3434
 
+	--line-brown: #8B8371
+
 	// Opacity
 	--main-opacity: 0.82
 	--footer-opacity: 0.75
 
+	// Shadows
+
 	// Dimensions
-	--main-content-width: 1170px
+	--main-content-width: 1200px
+	--main-content-padding-x: 15px
+
+	--mobile-menu-width: 220px
+
 	--footer-content-width: 1000px
 
 @mixin flex-items-center()
@@ -34,3 +44,13 @@
 	width: $width
 	height: $height
 	background: $background
+
+@mixin mobile-menu-blur($color, $blur)
+	background: $color
+	backdrop-filter: blur($blur)
+
+@mixin line-brown($width)
+	display: block
+	width: $width
+	height: 1px
+	background-color: var(--line-brown)

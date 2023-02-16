@@ -13,6 +13,11 @@
 		"gulp-imagemin": "^8.0.0",
 		"gulp-js-import": "^1.0.6",
 		"gulp-sass": "^5.1.0",
+		"gulp-webp": "^4.0.1",
+		"gulp-webp-html": "^1.0.2",
 		"sass": "^1.58.1"
+	},
+	"dependencies": {
+		"gulp-webp-html-nosvg": "^1.1.1"
 	}
 }
