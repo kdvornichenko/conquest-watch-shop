@@ -1,0 +1,78 @@
+@import '../../styles/_vars'
+header
+	padding: 35px 0
+	color: var(--header-color)
+	.content
+		@include flex-items-center
+		justify-content: space-between
+		.logo
+			a
+				font-family: var(--heading-fontFamily)
+				@include flex-items-center
+				gap: 3px
+		.nav
+			.list
+				@include flex-items-center
+				gap: 65px
+				& > li
+					& > a
+						display: block
+						position: relative
+						@include main-transition(color, ())
+						&::before
+							@include pseudo-elem(0, 1px, var(--header-color-hover))
+							@include main-transition(width, ())
+							bottom: 0
+							left: 0
+						&:hover
+							color: var(--header-color-hover)
+							&::before
+								width: 100%
+		.tools
+			.list
+				display: flex
+				gap: 23px
+				.item
+					svg
+						@include main-transition(transform, ())
+						will-change: transform
+					&:hover
+						svg
+							transform: scale(1.08)
+				&__search
+					position: relative
+					& > input
+						position: absolute
+						right: -5px
+						top: 0
+						bottom: 0
+						margin: auto 0
+						height: 25px
+						width: 0
+						padding: 2px 24px 2px 8px
+						border: 1px solid transparent
+						border-radius: 6px
+						z-index: 0
+						cursor: default
+						@include main-transition(width,	border-color)
+					& > button
+						position: relative
+						z-index: 1
+					&.active
+						& > input
+							width: 200px
+							cursor: text
+							border-color: var(--header-color)
+				&__favorite
+					path
+						@include main-transition(fill, ())
+					&:hover
+						path
+							fill: var(--favorite-icon-hover)
+							stroke: transparent
+				&__cart
+					path
+						@include main-transition(fill, ())
+					&:hover
+						path
+							fill: var(--header-color-hover)

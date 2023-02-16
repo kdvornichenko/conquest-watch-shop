@@ -1,0 +1,36 @@
+:root
+	// Font family
+	--main-fontFamily: 'Roboto', sans-serif
+	--heading-fontFamily: 'Playfair Display', serif
+	--price-fonFamily: 'Prata', serif
+	// Colors
+	--main-color-black: #1B1A17
+	--main-color-dark-brown: #444240
+	--main-color-white: #fff
+
+	--header-color: #555248
+	--header-color-hover: #918457
+
+	--favorite-icon-hover: #FF3434
+
+	// Opacity
+	--main-opacity: 0.82
+	--footer-opacity: 0.75
+
+	// Dimensions
+	--main-content-width: 1170px
+	--footer-content-width: 1000px
+
+@mixin flex-items-center()
+	display: flex
+	align-items: center
+
+@mixin main-transition($first, $second)
+	transition: $first 0.2s ease-in-out,$second 0.2s ease-in-out
+
+@mixin pseudo-elem($width, $height, $background)
+	position: absolute
+	content: ''
+	width: $width
+	height: $height
+	background: $background
