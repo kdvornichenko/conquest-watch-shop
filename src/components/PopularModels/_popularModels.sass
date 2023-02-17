@@ -1,0 +1,66 @@
+@import '../../styles/_vars'
+.popular
+	margin-top: 50px
+	h2
+		text-align: center
+	.look-all_link
+		text-align: right
+		a
+			padding-bottom: 10px
+			font-size: 16px
+			line-height: 19px
+			font-weight: 500
+			border-bottom: 1px solid #C4C0B6
+			color: var(--main-color-dark-brown)
+			transition: $main-transition
+			&:hover
+				color: var(--nav-color-hover)
+			@media screen and ( max-width: 1025px )
+				padding-bottom: 6px
+				font-size: 14px
+				line-height: 17px
+			@media screen and ( max-width: 700px )
+				margin-top: 15px
+				font-size: 12px
+				line-height: 15px
+	.cards
+		margin-top: 25px
+		@include flex-items-center()
+		justify-content: space-between
+		gap: 10px
+		@media screen and ( max-width: 700px )
+			margin-top: 15px
+			flex-wrap: wrap
+			justify-content: center
+		@media screen and ( max-width: 426px )
+			margin-top: 10px
+			flex-direction: column
+		.card
+			padding: 40px 28px
+			max-width: 370px
+			width: fit-content
+			@media screen and ( max-width: 1025px )
+				padding: 20px 18px
+			@media screen and ( max-width: 700px )
+				width: 45%
+			@media screen and ( max-width: 700px )
+				width: 100%
+			&__price
+				margin-top: 10px
+				font-size: 12px
+				line-height: 16px
+				opacity: var(--main-opacity)
+				@media screen and ( max-width: 1025px )
+					margin-top: 2px
+			.picture-holder
+				background: center / contain no-repeat url('./assets/images/watch_circle.svg')
+			.more
+				margin-top: 20px
+				@include flex-items-center()
+				gap: 18px
+				font-family: var(--font-playfaire)
+				transition: $main-transition
+				&__line
+					@include line-brown(30px)
+				&:hover
+					color: var(--main-color-dark-brown-hover)

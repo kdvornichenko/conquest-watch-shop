@@ -1,18 +1,19 @@
 @import './_vars'
 body
-	font-family: var(--main-fontFamily)
-	overflow-x: hidden
-	&.overflow-hidden
-		overflow: hidden
+	font-family: var(--font-roboto)
+	color: var(--main-color-black)
+
 	@media screen and ( min-width: 1241px )
 		padding: 0 calc(20px - (100vw - 100%)) 0 0
 		margin-right: -20px
 
-html
+html, body
 	overflow-x: hidden
+	&.overflow-hidden
+		overflow: hidden
 
 h1,h2,h3,h4,h5,h6
-	font-family: var(--heading-fontFamily)
+	font-family: var(--font-playfaire)
 
 h1
 	font-size: 45px
@@ -29,10 +30,12 @@ h3
 h4
 	font-size: 14px
 	line-height: 24px
+	font-weight: 700
+	opacity: var(--main-opacity)
 
 .price,.diameter
 	span
-		font-family: var(--price-fonFamily)
+		font-family: var(--font-prata)
 
 .content
 	max-width: var(--main-content-width)

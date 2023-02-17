@@ -1,8 +1,8 @@
 :root
 	// Font family
-	--main-fontFamily: 'Roboto', sans-serif
-	--heading-fontFamily: 'Playfair Display', serif
-	--price-fonFamily: 'Prata', serif
+	--font-roboto: 'Roboto', sans-serif
+	--font-playfaire: 'Playfair Display', serif
+	--font-prata: 'Prata', serif
 
 	// Colors
 	--main-color-black: #1B1A17
@@ -10,8 +10,8 @@
 	--main-color-dark-brown-hover: #6f6964
 	--main-color-white: #fff
 
-	--header-color: #555248
-	--header-color-hover: #918457
+	--nav-color: #555248
+	--nav-color-hover: #918457
 
 	--favorite-icon-hover: #FF3434
 
@@ -31,12 +31,11 @@
 
 	--footer-content-width: 1000px
 
+$main-transition: all 0.2s ease-in-out
+
 @mixin flex-items-center()
 	display: flex
 	align-items: center
-
-@mixin main-transition($first, $second)
-	transition: $first 0.2s ease-in-out,$second 0.2s ease-in-out
 
 @mixin pseudo-elem($width, $height, $background)
 	position: absolute
