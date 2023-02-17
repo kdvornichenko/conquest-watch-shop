@@ -139,8 +139,11 @@ header
 					top: 0
 					left: 0
 					opacity: 0
+					visibility: hidden
 					@include main-transition(opacity, ())
 					@include mobile-menu-blur(#bab9b980, 3px )
+					&.active
+						visibility: visible
 		.burger
 			width: 35px
 			height: 35px

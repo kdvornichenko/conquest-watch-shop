@@ -2,11 +2,14 @@
 body
 	font-family: var(--main-fontFamily)
 	overflow-x: hidden
-	padding: 0 calc(20px - (100vw - 100%)) 0 0
-	margin-right: -20px
-	&.overflow-hidden
-		scrollbar-gutter: stable
-		overflow: hidden
+	@media screen and ( min-width: 1241px )
+		padding: 0 calc(20px - (100vw - 100%)) 0 0
+		margin-right: -20px
+		&.overflow-hidden
+			overflow: hidden
+
+html
+	overflow-x: hidden
 
 h1,h2,h3,h4,h5,h6
 	font-family: var(--heading-fontFamily)
@@ -26,10 +29,6 @@ h3
 h4
 	font-size: 14px
 	line-height: 24px
-
-main
-	position: relative
-	z-index: -2
 
 .price,.diameter
 	span
@@ -58,3 +57,37 @@ main
 	h4
 		font-size: 14px
 		line-height: 24px
+
+@media screen and ( max-width: 769px )
+	h1
+		font-size: 32px
+		line-height: 50px
+
+	h2
+		font-size: 22px
+		line-height: 33px
+
+	h3
+		font-size: 20px
+		line-height: 30px
+
+	h4
+		font-size: 14px
+		line-height: 24px
+
+@media screen and ( max-width: 641px )
+	h1
+		font-size: 26px
+		line-height: 36px
+
+	h2
+		font-size: 18px
+		line-height: 26px
+
+	h3
+		font-size: 16px
+		line-height: 24px
+
+	h4
+		font-size: 12px
+		line-height: 18px

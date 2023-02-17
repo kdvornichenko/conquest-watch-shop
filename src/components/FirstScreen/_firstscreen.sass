@@ -1,9 +1,18 @@
 @import '../../styles/_vars'
 .first-screen
-	height: 768px
 	.content
+		padding-left: 75px
 		@include flex-items-center()
-		justify-content: space-around
+		justify-content: space-between
+		@media screen and ( max-width: 1241px )
+			padding-right: 40px
+		@media screen and ( max-width: 769px )
+			padding-right: var(--main-content-padding-x)
+			padding-left: 55px
+			margin-top: 30px
+		@media screen and ( max-width: 521px )
+			flex-direction: column
+			align-items: flex-start
 		.cta
 			position: relative
 			z-index: 1
@@ -12,17 +21,32 @@
 					margin-left: -65px
 					@include flex-items-center()
 					gap: 15px
+					@media screen and ( max-width: 1241px )
+						white-space: nowrap
+					@media screen and ( max-width: 769px )
+						margin-left: -37px
+						gap: 5px
 					span
 						margin-top: 5px
 						@include line-brown(50px)
+						@media screen and ( max-width: 769px )
+							@include line-brown(30px)
 				h3
 					margin-top: 15px
+					@media screen and ( max-width: 1241px )
+						margin-top: 10px
+					@media screen and ( max-width: 769px )
+						margin-top: 0
 			.text
 				margin-top: 39px
 				max-width: 260px
 				font-size: 14px
 				font-weight: 300
 				opacity: var(--main-opacity)
+				@media screen and ( max-width: 1241px )
+					margin-top: 20px
+				@media screen and ( max-width: 769px )
+					margin-top: 15px
 			.catalog
 				margin-top: 64px
 				padding: 26px 38px
@@ -35,21 +59,48 @@
 				@include main-transition(background-color, ())
 				&:hover
 					background-color: var(--main-color-dark-brown-hover)
+				@media screen and ( max-width: 1241px )
+					margin-top: 30px
+					padding: 20px 32px
+				@media screen and ( max-width: 769px )
+					padding: 16px 30px
+					margin-top: 20px
 		.picture
 			position: relative
+			@media screen and ( max-width: 1241px )
+				width: 60%
+				white-space: nowrap
+			@media screen and ( max-width: 521px )
+				margin-top: 20px
+				width: 80%
+				align-self: flex-end
+			@media screen and ( max-width: 426px )
+				width: 100%
 			.semicircle
 				height: 100%
 				position: absolute
-				left: -120px
+				left: -130px
+				bottom: 30px
 				z-index: 0
 				& > img
 					height: 100%
+				@media screen and ( max-width: 1241px )
+					bottom: 25px
+					left: -120px
+				@media screen and ( max-width: 769px )
+					display: none
 			&-holder
 				margin-top: -11px
+				@media screen and ( max-width: 1025px )
+					order: 1
 			&-container
 				position: relative
 				display: flex
 				z-index: 1
+				@media screen and ( max-width: 1025px )
+					font-size: 14px
+				@media screen and ( max-width: 769px )
+					font-size: 13px
 				.price
 					margin-top: 140px
 					margin-right: -65px
@@ -58,6 +109,20 @@
 					gap: 15px
 					&__line
 						@include line-brown(50px)
+						@media screen and ( max-width: 769px )
+							@include line-brown(30px)
+					@media screen and ( max-width: 1025px )
+						margin: 0
+						position: absolute
+						top: 50px
+						right: 60px
+						order: 2
+						flex-direction: row-reverse
+					@media screen and ( max-width: 641px )
+						right: 10px
+						top: 40px
+					@media screen and ( max-width: 521px )
+						right: 40px
 				.diameter
 					align-self: flex-end
 					margin-bottom: 135px
@@ -66,3 +131,9 @@
 					gap: 15px
 					&__line
 						@include line-brown(50px)
+						@media screen and ( max-width: 769px )
+							@include line-brown(30px)
+					@media screen and ( max-width: 1025px )
+						order: 3
+					@media screen and ( max-width: 641px )
+						margin-bottom: 60px
