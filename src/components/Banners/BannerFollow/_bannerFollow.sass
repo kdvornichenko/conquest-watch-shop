@@ -1,0 +1,37 @@
+@import '../../../styles/_vars'
+.banner-follow
+	padding: 52px 0 20px
+	@media screen and ( max-width: 1025px )
+		padding: 40px 0 15px
+	.content
+		@include flex-items-center()
+		justify-content: space-between
+		gap: 10px
+		@media screen and ( max-width: 575px )
+			flex-direction: column-reverse
+			align-items: flex-start
+		.catalog
+			margin-top: 45px
+			background-color: var(--banner-catalog)
+			&:hover
+				background-color: var(--banner-catalog-hover)
+			@media screen and ( max-width: 1025px )
+				margin-top: 20px
+		.picture-holder
+			display: grid
+			grid-template-columns: 242px 377px
+			grid-template-rows: 1fr 1fr
+			gap: 10px
+			grid-template-areas: "small-1 big" "small-2 big"
+			@media screen and ( max-width: 1241px )
+				grid-template-columns: calc( 55% / 1.55785124 ) 55%
+			@media screen and ( max-width: 1025px )
+				grid-template-columns: calc( 56% / 1.55785124 ) 56%
+			@media screen and ( max-width: 426px )
+				grid-template-columns: calc( 56% / 1.55785124 ) 57%
+			.small-1
+				grid-area: small-1
+			.small-2
+				grid-area: small-2
+			.big
+				grid-area: big

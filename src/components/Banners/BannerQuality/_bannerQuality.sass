@@ -1,0 +1,45 @@
+@import '../../../styles/_vars'
+.banner-quality
+	padding: 52px 0 20px
+	background: $banner-quality-bg
+	@media screen and ( max-width: 1025px )
+		padding: 40px 0 15px
+	.content
+		max-width: 997px
+		padding: 0 15px
+		@include flex-items-center()
+		justify-content: space-between
+		gap: 10px
+		@media screen and ( max-width: 575px )
+			flex-direction: column-reverse
+			align-items: flex-start
+		.catalog
+			margin-top: 45px
+			background-color: var(--banner-catalog)
+			&:hover
+				background-color: var(--banner-catalog-hover)
+			@media screen and ( max-width: 1025px )
+				margin-top: 20px
+		.picture-holder
+			@media screen and ( max-width: 769px )
+				width: 50%
+			@media screen and ( max-width: 575px )
+				width: 100%
+	.pagination
+		margin: 20px 55% 0 auto
+		width: fit-content
+		@include flex-items-center()
+		gap: 10px
+		@media screen and ( max-width: 769px )
+			margin: 10px 70% 0 auto
+		&__arrow
+			display: flex
+			cursor: pointer
+			transition: $main-transition
+			&.prev
+				transform: rotate(180deg)
+		&__counter
+			font-family: var(--font-prata)
+			font-size: 12px
+			line-height: 16px
+			cursor: default
