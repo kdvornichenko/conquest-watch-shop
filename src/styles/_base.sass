@@ -2,11 +2,11 @@
 body
 	font-family: var(--main-fontFamily)
 	overflow-x: hidden
+	&.overflow-hidden
+		overflow: hidden
 	@media screen and ( min-width: 1241px )
 		padding: 0 calc(20px - (100vw - 100%)) 0 0
 		margin-right: -20px
-		&.overflow-hidden
-			overflow: hidden
 
 html
 	overflow-x: hidden
