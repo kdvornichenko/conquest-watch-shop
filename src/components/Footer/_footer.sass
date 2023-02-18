@@ -1,2 +1,48 @@
-footer
-	background-color: red
+@import '../../styles/_vars'
+.footer
+	padding: 80px 0 67px
+	color: var(--main-color-white)
+	background-color: var(--main-color-dark-brown)
+	@media screen and ( max-width: 1025px )
+		padding: 60px 0 35px
+	@media screen and ( max-width: 700px )
+		padding: 40px 0 20px
+	.content
+		max-width: 1000px
+		display: flex
+		justify-content: space-between
+		gap: 30px
+		@media screen and ( max-width: 700px )
+			flex-wrap: wrap
+		@media screen and ( max-width: 376px )
+			gap: 10px
+			row-gap: 20px
+		.column
+			min-width: 140px
+			&__title
+				font-weight: 700
+				font-size: 14px
+				line-height: 16px
+				letter-spacing: 0.07em
+				text-transform: uppercase
+				@media screen and ( max-width: 1025px )
+					font-size: 12px
+				&.logo
+					font-family: var(--font-playfaire)
+					line-height: 19px
+					letter-spacing: 0.14em
+			ul
+				margin-top: 23px
+				& > li
+					font-size: 12px
+					line-height: 14px
+					opacity: var(--footer-opacity)
+					transition: $main-transition
+					&:not(:first-child)
+						margin-top: 15px
+						@media screen and ( max-width: 700px )
+							margin-top: 8px
+					&:hover
+						opacity: 1
+					@media screen and ( max-width: 700px )
+						font-size: 11px

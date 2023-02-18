@@ -10,13 +10,25 @@
 		@media screen and ( max-width: 575px )
 			flex-direction: column-reverse
 			align-items: flex-start
-		.catalog
-			margin-top: 45px
-			background-color: var(--banner-catalog)
-			&:hover
-				background-color: var(--banner-catalog-hover)
-			@media screen and ( max-width: 1025px )
-				margin-top: 20px
+		.socials
+			margin-top: 120px
+			@include flex-items-center()
+			gap: 18px
+			.item
+				path
+					transition: $main-transition
+			&__instagram
+				&:hover
+					path
+						fill: #E1306C
+			&__facebook
+				&:hover
+					path
+						fill: #4267B2
+			&__twitter
+				&:hover
+					path
+						fill: #1DA1F2
 		.picture-holder
 			display: grid
 			grid-template-columns: 242px 377px
