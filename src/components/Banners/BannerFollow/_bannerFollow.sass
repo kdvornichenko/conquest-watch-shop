@@ -14,6 +14,10 @@
 			margin-top: 120px
 			@include flex-items-center()
 			gap: 18px
+			@media screen and ( max-width: 1025px )
+				margin-top: 60px
+			@media screen and ( max-width: 700px )
+				margin-top: 30px
 			.item
 				path
 					transition: $main-transition
@@ -31,16 +35,12 @@
 						fill: #1DA1F2
 		.picture-holder
 			display: grid
-			grid-template-columns: 242px 377px
+			grid-template-columns: 1fr 1.568fr
 			grid-template-rows: 1fr 1fr
 			gap: 10px
 			grid-template-areas: "small-1 big" "small-2 big"
-			@media screen and ( max-width: 1241px )
-				grid-template-columns: calc( 55% / 1.55785124 ) 55%
-			@media screen and ( max-width: 1025px )
-				grid-template-columns: calc( 56% / 1.55785124 ) 56%
-			@media screen and ( max-width: 426px )
-				grid-template-columns: calc( 56% / 1.55785124 ) 57%
+			@media screen and ( max-width: 700px )
+				grid-template-columns: 1fr 1.58fr
 			.small-1
 				grid-area: small-1
 			.small-2
